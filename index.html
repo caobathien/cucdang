@@ -919,6 +919,9 @@
                 <img class="letter-inline-image" id="letterInlineImage" src="" alt="" />
                 <span class="letter-image-caption">♥</span>
             </div>
+            <button type="button" id="btn-more-content" aria-label="Còn tiếp nữa nè" onclick="window.location.href='NCD/index.html';" style="display: none; margin: 15px auto 0; padding: 10px 20px; font-family: inherit; font-size: 16px; color: #fff; background-color: #ff6b81; border: none; border-radius: 20px; cursor: pointer; box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3); transition: all 0.3s ease;">
+                Còn tiếp nữa nè
+            </button>
         </div>
     </div>
 
@@ -940,10 +943,10 @@
             passcode: '0308',
             passcodeTitle: 'Nhập mật khẩu',
             passcodeSubtitle: 'Mở món quà đặc biệt',
-            morphTexts: ['happy', 'women\'s day', 'em iu'],
+            morphTexts: [],
             particleImage: 'assets/pngegg.png',
             sphereImages: [],
-            burstWishTexts: ['Chuc mung ngay quoc te phu nu', '8/3', 'Happy Women\'s Day', 'Chuc cac ban luon hanh phuc va vui ve'],
+            burstWishTexts: [],
             letter: {
                 text: 'Happy Women\'s Day!',
                 image: '',
@@ -2579,6 +2582,14 @@
                                 requestAnimationFrame((() => {
                                     wrap.classList.add('visible');
                                 }));
+                                
+                                setTimeout(() => {
+                                    const btnMore = document.getElementById('btn-more-content');
+                                    if (btnMore) {
+                                        btnMore.style.display = 'block';
+                                        // add a small animation class if needed, or just display block
+                                    }
+                                }, 5000);
                             }
                         }), 400);
                     }

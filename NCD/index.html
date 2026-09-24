@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Devpan">
+  <meta name="description" content="Thiệp Valentine tương tác với mật mã, lời nhắn, nhạc và thẻ cào.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Cục Dàng ❤️</title>
+  <link rel="icon" href="https://lovecodes2.vercel.app/HeartBeatz/assets/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="music-container"></div>
+
+  <main>
+    <section id="lock-screen" class="screen active" aria-labelledby="lock-title">
+      <div class="lock-container">
+        <h1 id="lock-title" class="title">Ngày Ta Chung Đôi</h1>
+
+        <div class="pass-dots" aria-label="Mật khẩu gồm 4 chữ số">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div class="numpad" aria-label="Bàn phím số">
+          <button class="num-btn" data-number="1">1</button>
+          <button class="num-btn" data-number="2">2</button>
+          <button class="num-btn" data-number="3">3</button>
+          <button class="num-btn" data-number="4">4</button>
+          <button class="num-btn" data-number="5">5</button>
+          <button class="num-btn" data-number="6">6</button>
+          <button class="num-btn" data-number="7">7</button>
+          <button class="num-btn" data-number="8">8</button>
+          <button class="num-btn" data-number="9">9</button>
+          <span aria-hidden="true"></span>
+          <button class="num-btn" data-number="0">0</button>
+          <button id="clear-button" class="num-btn" type="button" aria-label="Xóa mật khẩu">❌</button>
+        </div>
+
+        <p class="hint">Gợi ý: Ngày kỷ niệm</p>
+      </div>
+    </section>
+
+    <section id="card-screen" class="screen" aria-labelledby="main-title">
+      <div class="card-wrapper">
+        <div class="card-left">
+          <h1 id="main-title" class="main-title"></h1>
+          <div id="typewriter" class="typing-text" aria-live="polite"></div>
+          <p class="scratch-hint">
+            <i class="fas fa-hand-point-right" aria-hidden="true"></i>
+            Cào nhẹ tấm thẻ để xem điều bất ngờ...
+          </p>
+          <button type="button" id="btn-more-content" aria-label="Còn tiếp nữa nè" onclick="window.location.href='hoa/index.html';" style="margin: 15px auto 0; padding: 10px 20px; font-family: inherit; font-size: 16px; color: #fff; background-color: #ff6b81; border: none; border-radius: 20px; cursor: pointer; box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3); transition: all 0.3s ease; display: none;">
+              Còn tiếp nữa nè
+          </button>
+        </div>
+
+        <div class="card-right">
+          <div class="scratch-box">
+            <div id="gallery" class="hidden-gallery"></div>
+            <canvas id="scratch" aria-label="Thẻ cào, hãy kéo chuột hoặc ngón tay để cào"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Một bó hoa nhỏ dành tặng người thương." />
+    <title>Cục Dàng ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="start-screen" class="start-screen">
+      <button id="open-gift" class="gift-button" type="button">
+        <img
+          src="https://lovelys2.vercel.app/HeartBeats/assets/a/anhz.png"
+          alt="Ảnh món quà"
+        />
+        <span>Cục dàng chạm vào ảnh đi</span>
+      </button>
+    </section>
+
+    <main id="main-content" class="main-content" aria-hidden="true">
+      <div class="ambient-glow"></div>
+      <h1 id="flower-title" class="special-text">Tặng em một bó hoa</h1>
+      <div id="petals" class="petals" aria-hidden="true"></div>
+
+      <div id="flowers" class="flowers" aria-label="Bó hoa tulip"></div>
+
+      <div id="bouquet-wrap" class="bouquet-wrap">
+        <img
+          src="https://lovelys2.vercel.app/HeartBeats/assets/a/bhoa.png"
+          alt="Giấy gói bó hoa"
+        />
+      </div>
+    </main>
+
+    <button id="letter-button" class="letter-button" type="button" aria-label="Mở thư"></button>
+
+    <div id="letter-modal" class="letter-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <article class="letter-card">
+        <button id="close-letter" class="close-letter" type="button" aria-label="Đóng thư">×</button>
+        <h2 id="letter-title">Gửi em 🌷</h2>
+        <p id="letter-message">Hôm nay là một ngày đặc biệt...</p>
+        <p id="letter-sign" class="letter-sign">Anh yêu em ❤️</p>
+      </article>
+    </div>
+
+    <audio id="background-music" src="../../music/nhacdongdieu.mp3" preload="auto" loop></audio>
+    <button id="music-toggle" class="music-control" type="button" aria-label="Bật hoặc tắt nhạc" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; padding: 10px 15px; background: rgba(0,0,0,0.5); color: #fff; border: none; border-radius: 20px; cursor: pointer; font-family: 'Mali', sans-serif; display: flex; align-items: center; gap: 8px;">
+      <span class="music-label">Pause Music ⏸</span>
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
