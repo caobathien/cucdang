@@ -1,6 +1,6 @@
 window.CUSTOM_APP_CONFIG = {
   appTitle: "Gửi bé yêu ❤️",
-  appIcon: "assets/images/icons/couple.png",
+  appIcon: "image/1790246537415_2142046926086214970_5656456680232256511_2b4a96117aa21574ff2bb67afa0db3ee.jpg",
   enableWebsiteInfo: true,
   enablePasscode: false,
   enableMorphEffect: true,
